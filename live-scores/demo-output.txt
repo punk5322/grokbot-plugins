@@ -1,0 +1,127 @@
+# live-scores demo: real JSON-RPC over stdio, recorded 2026-10-14 18:58 PDT
+
+## REQUESTS
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","clientInfo":{"name":"demo","version":"0"}}}
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+{"jsonrpc":"2.0","id":2,"method":"tools/list"}
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"get_scoreboard","arguments":{"league":"mlb"}}}
+{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"find_team_game","arguments":{"team":"Dodgers","league":"mlb"}}}
+
+## RESPONSES
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": {}
+    },
+    "serverInfo": {
+      "name": "live-scores",
+      "version": "0.1.0"
+    }
+  }
+}
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "tools": [
+      {
+        "name": "get_scoreboard",
+        "description": "Live and recent scores for a league (pre/in/post status). Leagues: nfl, nba, wnba, mlb, nhl, mls, epl, laliga, seriea, bundesliga, ucl, ncaaf, ncaab.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "league": {
+              "type": "string",
+              "enum": [
+                "nfl",
+                "nba",
+                "wnba",
+                "mlb",
+                "nhl",
+                "mls",
+                "epl",
+                "laliga",
+                "seriea",
+                "bundesliga",
+                "ucl",
+                "ncaaf",
+                "ncaab"
+              ]
+            },
+            "date": {
+              "type": "string",
+              "description": "Optional YYYY-MM-DD; defaults to today"
+            }
+          },
+          "required": [
+            "league"
+          ]
+        }
+      },
+      {
+        "name": "find_team_game",
+        "description": "Find today's (or a given date's) game for a specific team, e.g. 'Lakers' or 'Arsenal'.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "league": {
+              "type": "string",
+              "enum": [
+                "nfl",
+                "nba",
+                "wnba",
+                "mlb",
+                "nhl",
+                "mls",
+                "epl",
+                "laliga",
+                "seriea",
+                "bundesliga",
+                "ucl",
+                "ncaaf",
+                "ncaab"
+              ]
+            },
+            "date": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "league"
+          ]
+        }
+      }
+    ]
+  }
+}
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[\n  {\n    \"league\": \"mlb\",\n    \"name\": \"Milwaukee Brewers at Los Angeles Dodgers\",\n    \"status\": \"in\",\n    \"detail\": \"Top 7th\",\n    \"start\": \"2026-10-15T00:00Z\",\n    \"home\": {\n      \"team\": \"Los Angeles Dodgers\",\n      \"abbr\": \"LAD\",\n      \"score\": \"2\",\n      \"record\": \"100-62\"\n    },\n    \"away\": {\n      \"team\": \"Milwaukee Brewers\",\n      \"abbr\": \"MIL\",\n      \"score\": \"1\",\n      \"record\": \"103-59\"\n    },\n    \"venue\": \"Dodger Stadium\",\n    \"broadcast\": \"FS1\"\n  }\n]"
+      }
+    ]
+  }
+}
+{
+  "jsonrpc": "2.0",
+  "id": 4,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[\n  {\n    \"league\": \"mlb\",\n    \"name\": \"Milwaukee Brewers at Los Angeles Dodgers\",\n    \"status\": \"in\",\n    \"detail\": \"Top 7th\",\n    \"start\": \"2026-10-15T00:00Z\",\n    \"home\": {\n      \"team\": \"Los Angeles Dodgers\",\n      \"abbr\": \"LAD\",\n      \"score\": \"2\",\n      \"record\": \"100-62\"\n    },\n    \"away\": {\n      \"team\": \"Milwaukee Brewers\",\n      \"abbr\": \"MIL\",\n      \"score\": \"1\",\n      \"record\": \"103-59\"\n    },\n    \"venue\": \"Dodger Stadium\",\n    \"broadcast\": \"FS1\"\n  }\n]"
+      }
+    ]
+  }
+}

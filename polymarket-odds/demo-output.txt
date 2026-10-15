@@ -1,0 +1,89 @@
+# polymarket-odds demo: real JSON-RPC over stdio, recorded 2026-10-14 18:58 PDT
+
+## REQUESTS
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","clientInfo":{"name":"demo","version":"0"}}}
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+{"jsonrpc":"2.0","id":2,"method":"tools/list"}
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"trending_markets","arguments":{"limit":5}}}
+{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"search_markets","arguments":{"query":"fed","limit":3}}}
+
+## RESPONSES
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": {}
+    },
+    "serverInfo": {
+      "name": "polymarket-odds",
+      "version": "0.1.0"
+    }
+  }
+}
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "tools": [
+      {
+        "name": "trending_markets",
+        "description": "Most-traded open Polymarket prediction markets right now, with implied probabilities (%).",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "default": 10,
+              "maximum": 50
+            }
+          }
+        }
+      },
+      {
+        "name": "search_markets",
+        "description": "Find open Polymarket markets about a topic (e.g. 'election', 'bitcoin', 'Fed') and return current odds.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer",
+              "default": 8
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    ]
+  }
+}
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[\n  {\n    \"question\": \"Will there be no change in Fed interest rates after the October 2026 meeting?\",\n    \"outcomes\": [\n      {\n        \"name\": \"Yes\",\n        \"prob\": 76.5\n      },\n      {\n        \"name\": \"No\",\n        \"prob\": 23.5\n      }\n    ],\n    \"volume_24h\": 2612970,\n    \"liquidity\": 172326,\n    \"end_date\": \"2026-10-29T03:59:00Z\",\n    \"url\": \"https://polymarket.com/event/fed-decision-in-october-20260617190323537\"\n  },\n  {\n    \"question\": \"Milwaukee Brewers vs. Los Angeles Dodgers\",\n    \"outcomes\": [\n      {\n        \"name\": \"Milwaukee Brewers\",\n        \"prob\": 21.5\n      },\n      {\n        \"name\": \"Los Angeles Dodgers\",\n        \"prob\": 78.5\n      }\n    ],\n    \"volume_24h\": 1740113,\n    \"liquidity\": 113702,\n    \"end_date\": \"2026-10-22T00:00:00Z\",\n    \"url\": \"https://polymarket.com/event/mlb-mil-lad-2026-10-14\"\n  },\n  {\n    \"question\": \"Will Indiana enact a data center moratorium by December 31, 2027?\",\n    \"outcomes\": [\n      {\n        \"name\": \"Yes\",\n        \"prob\": 12.5\n      },\n      {\n        \"name\": \"No\",\n        \"prob\": 87.5\n      }\n    ],\n    \"volume_24h\": 1605593,\n    \"liquidity\": 609260,\n    \"end_date\": \"2028-01-01T04:59:00Z\",\n    \"url\": \"https://polymarket.com/event/indiana-enacts-data-center-moratorium-by-20260929\"\n  },\n  {\n    \"question\": \"Will the Fed increase interest rates by 25 bps after the October 2026 meeting?\",\n    \"outcomes\": [\n      {\n        \"name\": \"Yes\",\n        \"prob\": 22.5\n      },\n      {\n        \"name\": \"No\",\n        \"prob\": 77.5\n      }\n    ],\n    \"volume_24h\": 1441871,\n    \"liquidity\": 169226,\n    \"end_date\": \"2026-10-29T03:59:00Z\",\n    \"url\": \"https://polymarket.com/event/fed-decision-in-october-20260617190323537\"\n  },\n  {\n    \"question\": \"Western Kentucky vs. Sam Houston\",\n    \"outcomes\": [\n      {\n        \"name\": \"Western Kentucky\",\n        \"prob\": 75.5\n      },\n      {\n        \"name\": \"Sam Houston\",\n        \"prob\": 24.5\n      }\n    ],\n    \"volume_24h\": 710606,\n    \"liquidity\": 440276,\n    \"end_date\": \"2026-10-15T00:00:00Z\",\n    \"url\": \"https://polymarket.com/event/cfb-wkent-smho-2026-10-14\"\n  }\n]"
+      }
+    ]
+  }
+}
+{
+  "jsonrpc": "2.0",
+  "id": 4,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[\n  {\n    \"question\": \"Will there be no change in Fed interest rates after the October 2026 meeting?\",\n    \"outcomes\": [\n      {\n        \"name\": \"Yes\",\n        \"prob\": 76.5\n      },\n      {\n        \"name\": \"No\",\n        \"prob\": 23.5\n      }\n    ],\n    \"volume_24h\": 2612970,\n    \"liquidity\": 172326,\n    \"end_date\": \"2026-10-29T03:59:00Z\",\n    \"url\": \"https://polymarket.com/event/fed-decision-in-october-20260617190323537\"\n  },\n  {\n    \"question\": \"Will the Fed increase interest rates by 25 bps after the October 2026 meeting?\",\n    \"outcomes\": [\n      {\n        \"name\": \"Yes\",\n        \"prob\": 22.5\n      },\n      {\n        \"name\": \"No\",\n        \"prob\": 77.5\n      }\n    ],\n    \"volume_24h\": 1441871,\n    \"liquidity\": 169226,\n    \"end_date\": \"2026-10-29T03:59:00Z\",\n    \"url\": \"https://polymarket.com/event/fed-decision-in-october-20260617190323537\"\n  },\n  {\n    \"question\": \"Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?\",\n    \"outcomes\": [\n      {\n        \"name\": \"Yes\",\n        \"prob\": 0.6\n      },\n      {\n        \"name\": \"No\",\n        \"prob\": 99.5\n      }\n    ],\n    \"volume_24h\": 629624,\n    \"liquidity\": 599633,\n    \"end_date\": \"2026-10-29T03:59:00Z\",\n    \"url\": \"https://polymarket.com/event/fed-decision-in-october-20260617190323537\"\n  }\n]"
+      }
+    ]
+  }
+}

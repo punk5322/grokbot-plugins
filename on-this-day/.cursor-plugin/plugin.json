@@ -1,0 +1,20 @@
+{
+  "name": "on-this-day",
+  "version": "1.0.0",
+  "description": "What happened on this day in history: events, famous births and deaths, and holidays, straight from Wikipedia.",
+  "author": {
+    "name": "Arsh Shah"
+  },
+  "license": "MIT",
+  "keywords": [
+    "history",
+    "wikipedia",
+    "trivia",
+    "on-this-day"
+  ],
+  "homepage": "https://github.com/punk5322/grokbot-plugins/tree/main/on-this-day",
+  "repository": "https://github.com/punk5322/grokbot-plugins",
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

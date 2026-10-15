@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "live-scores": {
+      "url": "https://live-scores.me-870.workers.dev/mcp"
+    }
+  }
+}

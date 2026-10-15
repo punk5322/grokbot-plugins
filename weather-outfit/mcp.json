@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "weather-outfit": {
+      "url": "https://weather-outfit.me-870.workers.dev/mcp"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "live-scores",
+  "version": "1.0.0",
+  "description": "Live and recent scores for NFL, NBA, MLB, NHL, WNBA, MLS, Premier League, La Liga, Champions League and college sports, from ESPN's public scoreboard.",
+  "author": {
+    "name": "Arsh Shah"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sports",
+    "scores",
+    "nfl",
+    "nba",
+    "soccer"
+  ],
+  "homepage": "https://github.com/punk5322/grokbot-plugins/tree/main/live-scores",
+  "repository": "https://github.com/punk5322/grokbot-plugins",
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "polymarket-odds",
+  "version": "1.0.0",
+  "description": "Live prediction-market odds from Polymarket: what's trending and what the crowd thinks about any topic, as probabilities.",
+  "author": {
+    "name": "Arsh Shah"
+  },
+  "license": "MIT",
+  "keywords": [
+    "polymarket",
+    "prediction-markets",
+    "odds",
+    "news"
+  ],
+  "homepage": "https://github.com/punk5322/grokbot-plugins/tree/main/polymarket-odds",
+  "repository": "https://github.com/punk5322/grokbot-plugins",
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

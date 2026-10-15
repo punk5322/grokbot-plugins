@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "polymarket-odds": {
+      "url": "https://polymarket-odds.me-870.workers.dev/mcp"
+    }
+  }
+}
